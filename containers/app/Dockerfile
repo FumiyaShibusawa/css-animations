@@ -2,24 +2,24 @@ FROM ruby:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8
-ENV APP_ROOT ./react-redux-todoapp
+ENV APP_ROOT ./css-animations
 
 WORKDIR $APP_ROOT
 
 # 基本的なパッケージのインストール
 RUN apt-get update \
     && apt-get install -y build-essential \
-       curl \
-       git \
-       vim \
-       less \
-       gcc \
-       g++ \
-       apt-transport-https \
-       wget \
+    curl \
+    git \
+    vim \
+    less \
+    gcc \
+    g++ \
+    apt-transport-https \
+    wget \
     && apt-get autoclean && \
-       apt-get clean && \
-       rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
 # yarnパッケージ管理ツールインストール
