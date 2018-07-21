@@ -10,7 +10,7 @@
     "babel-preset-env": "^1.7.0"
   },
   "scripts": {
-    "build": "babel src -d lib",
+    "build": "babel --watch src -d lib",
     "start": "node ./lib/app.js"
   }
 }
