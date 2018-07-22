@@ -3,6 +3,8 @@
   "private": true,
   "dependencies": {
     "express": "^4.16.3",
+    "node-sass": "^4.9.2",
+    "npm": "^6.2.0",
     "pug": "^2.0.3"
   },
   "devDependencies": {
@@ -10,7 +12,11 @@
     "babel-preset-env": "^1.7.0"
   },
   "scripts": {
-    "build": "babel --watch src -d lib",
-    "start": "node ./lib/app.js"
+    "babel": "babel src/public/javascripts/application.js -o src/lib/application.js",
+    "babel-w": "babel -w src/public/javascripts/application.js -o src/lib/application.js",
+    "sass": "./node_modules/node-sass/bin/node-sass src/public/scss/style.scss src/lib/application.css",
+    "sass-w": "./node_modules/node-sass/bin/node-sass -w src/public/scss/style.scss src/lib/application.css",
+    "build": "npm run babel && npm run sass",
+    "start": "node src/lib/application.js"
   }
 }
