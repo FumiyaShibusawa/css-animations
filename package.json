@@ -17,6 +17,6 @@
     "sass": "./node_modules/node-sass/bin/node-sass src/public/scss/style.scss src/lib/application.css",
     "sass-w": "./node_modules/node-sass/bin/node-sass -w src/public/scss/style.scss src/lib/application.css",
     "build": "npm run babel && npm run sass",
-    "start": "node src/lib/javascripts/application.js"
+    "start": "DEBUG=express:* node src/lib/javascripts/application.js"
   }
 }
