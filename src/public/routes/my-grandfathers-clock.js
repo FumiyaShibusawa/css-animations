@@ -1,5 +1,5 @@
 import express from 'express'
-const router = express.Router();
+const router = express.Router()
 
 router.get('/my-grandfathers-clock', (req, res) => {
   res.render('my-grandfathers-clock', {
